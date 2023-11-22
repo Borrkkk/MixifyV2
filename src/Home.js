@@ -30,10 +30,6 @@ function Home() {
             <h2>Create and share a digital mixtape using <a className='spotify-link' href="https://spotify.com" target="_blank" rel="noopener noreferrer">Spotify's</a> library</h2>
             <a className='btn' href='/create'><h2 className='inline'>Create</h2></a>
             </div>
-            <div>
-                <div className='recordCover'></div>
-                <div className='disc'></div>
-            </div>
             
         </div>
     );
