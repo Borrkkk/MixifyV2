@@ -13,7 +13,13 @@ function NavBar(){
 
   const handleLogout = () => { 
     localStorage.removeItem('code')
+    
     navigate("/");
+    window.open(
+      "https://accounts.spotify.com/logout",
+      "_blank",
+      "width=600,height=400"
+    );
     setLoggedIn(false);
   }
 
@@ -28,12 +34,13 @@ function NavBar(){
             <Link className="link" to ="/">Home </Link> 
             <Link className="link" to ="/contact"> Contact </Link>
             <Link className="link" to ="/about"> About </Link>  
+            <Link className="link" to ="/privacy"> Privacy Policy </Link>  
           </div>
           
           <div className='nav-right'>
             {
-              loggedIn ? <button onClick={handleLogout} className="btn"> Logout </button> :
-               <button  className="btn"><a href={AUTH_URL}> Login </a> </button>
+              loggedIn ? < button className="btn" onClick={handleLogout} target='_blank'>    Logout   </button> :
+              <a className="btn" href={AUTH_URL}> Login  </a> 
             }
             
           </div>

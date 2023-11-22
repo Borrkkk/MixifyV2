@@ -29,6 +29,7 @@ h2{
   border-radius: 5px;
   color: white;
   background-color: #4e3103;
+  text-align: center;
   opacity: 1;
   transition: 0.3s ease;
 }

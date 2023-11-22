@@ -23,8 +23,9 @@ function Home() {
 
     return (
         <div className='section1'>
+
                 <span id='blur'></span>
-            <h1 className='inline bg-graphic'>MIXIFY</h1>
+         <h1 className='inline bg-graphic'>MIXIFY</h1>
             <div className='content'>
             <h1>Welcome to <h1 style={{color : ' rgb(255, 145, 0)', display: "inline"}}>Mixify</h1></h1>
             <h2>Create and share a digital mixtape using <a className='spotify-link' href="https://spotify.com" target="_blank" rel="noopener noreferrer">Spotify's</a> library</h2>
