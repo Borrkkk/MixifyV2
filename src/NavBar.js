@@ -8,11 +8,11 @@ const AUTH_URL = 'https://accounts.spotify.com/authorize?client_id=62143053f6564
 function NavBar(){
   const navigate = useNavigate();
   const code = localStorage.getItem("code");
-  console.log( "NAVBAR: " + code )
   const [loggedIn, setLoggedIn] = useState(code != null);
 
   const handleLogout = () => { 
     localStorage.removeItem('code')
+    localStorage.removeItem('accessToken')
     
     navigate("/");
     window.open(

@@ -10,7 +10,7 @@ import Create from './Create';
 let code = new URLSearchParams(window.location.search).get("code")
 
 //if localStorage doesnt have a code, set it to the code from the URL
-if (localStorage.getItem("code") == null && code !== null) {
+if (code !== null) {
   console.log("Setting code to: " + code);
   localStorage.setItem("code", code);
 }
@@ -24,7 +24,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/create" element={<Create/>} />
+      <Route path="/create" element={<Create />} />
     </Routes>
   </div>
   );

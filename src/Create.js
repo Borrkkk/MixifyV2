@@ -9,10 +9,8 @@ import useAuth from './useAuth';
 const spotifyApi = new SpotifyWebApi({
     clientId: "62143053f6564d6b82927c97a90de897",
 })
-
 function Create() {
-    const code = localStorage.getItem("code");
-    const accessToken = useAuth(code);
+    const accessToken = useAuth();
     const [ search, setSearch] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [mixtape, setMixtape] = useState([]);
@@ -77,7 +75,6 @@ function Create() {
 
     return (
     <div className='container'>
-    <h1 className='inline bg-graphic'>MIXIFY</h1>
     <div className='content'>
     <h1>Create a playlist</h1>
         <h2>Mixtape Name:</h2>
@@ -99,7 +96,7 @@ function Create() {
         </div>
        {searchResults.map(song => (
             <div>
-                <SearchResult song={song}/>
+                <SearchResult track={song} chooseTrack={addSong}/>
             </div>))
         }
     </div>
